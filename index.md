@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# Research Assistant (Answers to the questions)
 
-You can use the [editor on GitHub](https://github.com/Mtahirs/BuyCoins/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Recursion for Fibbonacci is bad
+The reason for speed difference is: calling a function means putting the current function values and the call parameters on the stack, then after the function call finished the return value is put on the stack, and the last calling function is loaded by loading its state from the stack, and the returned value is read, too, to process it.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+The compiler allocates new Activation Record (Just think as an ordinary Stack) for that new function. That stack is used to keep your states, variables, and addresses. The compiler creates a stack for each function, and this creation process continues until the base case is reached. So, when the data size becomes larger, the compiler needs a large stack segment to calculate the whole process. Recursion may cause memory overflow if your stack space is large, and is also inefficient in cases where the same value is calculated again and again.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In recursion, the stack segment is being raised during run-time. The compiler does not know how much memory will be occupied during compile time.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Why Stock to Flow Model is Bad 
+Stock to Flow Ratio is the amount of a commodity held in inventories divided by the amount produced annually. It is a measure of the abundance of the commodity. The higher the stock to flow ratio, the more scarce a commodity is and vice versa.
 
-1. Numbered
-2. List
+The S2F ratio of an asset is calculated by dividing the current supply by the number of new units of that asset produced in a given period. Bitcoin S2F equals its supply divided by the number of new coins per given period. 
 
-**Bold** and _Italic_ and `Code` text
+Bitcoin stock to flow model (S2F) is one of many price forecasting model that is used to predict the future price of bitcoin, popularised by a pseudonymous investor under the Twitter account PlanB.
+The bitcoin S2F model compares the correlation between the prices and the stock to flow of gold and silver to argues the same for bitcoin.
+It states that certain precious metals have maintained a monetary role throughout history because of their unforgeable costliness and low rate of supply.
 
-[Link](url) and ![Image](src)
-```
+For example, gold is valuable both because new supply (mined gold) is insignificant to the current supply and because it is impossible to replicate the vast stores of gold around the globe. PlanB then argues that this same logic applies to Bitcoin, which becomes more valuable as new supply is reduced every four years. 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Plan B’s argument invariably implies that the value of bitcoin would keep increasing as its supply decreases and therefore increasing its scarcity which is a measure of S2F.
 
-### Jekyll Themes
+This model seems all good on paper; however, when tested against reality, this model fails. 
+The problem with this model starts from first assuming that scarcity denotes value.
+Just because a commodity is scarce, it doesn’t always mean it is valuable. It is the demand for a commodity that determines the price. For example, there are plentiful reserves of crude oil, but the demand is so high that the price has not fallen until recent when the demand fell.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Mtahirs/BuyCoins/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Secondly, the premise of using the S2F ratio to determine the price of bitcoin. The model uses gold as an example, however, not only that the S2F of gold is not the only determinant of the price of gold, the S2F of gold is sometimes uncorrelated to gold's price.
 
-### Support or Contact
+Not only that the S2F model doesn’t account for the prices other cryptocurrencies, it also fails to explain why metals like to explain why palladium(S2F=) and platinum (S2F=0.4) are often worth more than gold despite having tiny stock-to-flow ratios. 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Conclusively, the S2F model attempt to predict the price of bitcoin looks good but there are alot of problems with the hypothesis, from using gold’s S2F ratio as a price determinant where gold’s price isn’t determined by its S2F. The problem of not solving for other cryptocurrencies. These among other factors male the Bitcoin S2F model not reliable.
+
+
+
+
+
