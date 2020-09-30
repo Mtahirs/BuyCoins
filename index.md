@@ -33,7 +33,7 @@ Not only that the S2F model doesn’t account for the prices other cryptocurrenc
 
 Conclusively, the S2F model attempt to predict the price of bitcoin looks good but there are alot of problems with the hypothesis, from using gold’s S2F ratio as a price determinant where gold’s price isn’t determined by its S2F. The problem of not solving for other cryptocurrencies. These among other factors male the Bitcoin S2F model not reliable.
 
-#Code for checking Proth prime
+# Code for checking Proth prime
 ```
 #include <bits/stdc++.h> 
 using namespace std; 
